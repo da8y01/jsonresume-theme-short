@@ -143,6 +143,33 @@
 	</section>
 	{{/if}}
 
+	{{#if resume.projects.length}}
+	<section class="experience">
+		<h2>Projects</h2>
+		{{#each resume.projects}}
+		<section class="item">
+			<header>
+				{{#if name}}
+					<h3 class="name">{{name}}</h3>
+				{{/if}}
+			</header>
+			{{#if summary}}
+			<div class="summary">
+				<p>{{paragraphSplit summary}}</p>
+			</div>
+			{{/if}}
+			{{#if highlights.length}}
+			<ul class="highlights">
+				{{#each highlights}}
+				<li>{{.}}</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</section>
+		{{/each}}
+	</section>
+	{{/if}}
+
 	{{#if resume.volunteer.length}}
 	<section class="experience">
 		<h2>Volunteering</h2>
