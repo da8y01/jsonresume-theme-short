@@ -73,6 +73,31 @@
 	</section>
 	{{/resume.basics}}
 
+	{{#if resume.publications.length}}
+	<section id="publications">
+		<h2>Academic Publications</h2>
+		{{#each resume.publications}}
+		<div class="item">
+			{{#if name}}
+			<div class="name">
+				{{name}}
+			</div>
+			{{/if}}
+			{{#if authors}}
+			<div class="authors">
+				{{authors}}
+			</div>
+			{{/if}}
+			{{#if venue}}
+			<div class="venue">
+				{{venue}}
+			</div>
+			{{/if}}
+		</div>
+		{{/each}}
+	</section>
+	{{/if}}	
+
 	{{#if resume.skills.length}}
 	<section id="skills">
 		<h2>Skills</h2>
@@ -301,41 +326,6 @@
 	</section>
 	{{/if}}
 	
-	{{#if resume.publications.length}}
-	<section id="publications">
-		<h2>Publications</h2>
-		{{#each resume.publications}}
-		<div class="item">
-			{{#if name}}
-			<div class="name">
-				{{name}}
-			</div>
-			{{/if}}
-			{{#if publisher}}
-			<div class="publisher">
-				{{publisher}}
-			</div>
-			{{/if}}
-			{{#if releaseDate}}
-			<div class="releaseDate">
-				{{releaseDate}}
-			</div>
-			{{/if}}
-			{{#if website}}
-			<div class="website">
-				<a href="{{website}}">Link</a>
-			</div>
-			{{/if}}
-			{{#if summary}}
-			<div class="summary">
-				<p>{{summary}}</p>
-			</div>
-			{{/if}}
-		</div>
-		{{/each}}
-	</section>
-	{{/if}}
-
 	{{#if resume.languages.length}}
 	<section id="languages">
 		<h2>Languages</h2>

@@ -141,4 +141,10 @@ section h2 {
 	border-bottom: 0;
 }
 
+#publications .authors {
+	font-size: 0.8em;
+}
 
+#publications .venue {
+	font-size: 0.8em;
+}
